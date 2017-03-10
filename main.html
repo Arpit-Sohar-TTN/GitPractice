@@ -9,7 +9,33 @@
  </head>
  
   <script>
-     
+function Add() {
+       var Notes_2000 = parseInt($("#S_text1").val());
+       var Notes_500 = parseInt($("#S_text2").val());
+       var Notes_100 = parseInt($("#S_text3").val());
+       var Notes_50 = parseInt($("#S_text4").val());
+         if(isNaN(Notes_2000)) {
+             Notes_2000 = 0;
+         }
+        if(isNaN(Notes_500)) {
+             Notes_500 = 0;
+         }
+        if(isNaN(Notes_100)) {
+             Notes_100 = 0;
+         }
+         if(isNaN(Notes_50)) {
+              Notes_50 = 0;
+          }
+        var Amount = Notes_2000 * 2000 + Notes_500 * 500 + Notes_100 * 100 + Notes_50*50;
+        var bankers = new Banker(Notes_2000, Notes_500, Notes_100,Notes_50, Amount,1000)
+        var logs = new Logs(Amount, Notes_2000, Notes_500, Notes_100,Notes_50, Amount, "Credit")
+        logs.appRow();
+        document.getElementById("S_text6").innerHTML = Amount;
+        $("#S_buttonAdd").attr("disabled", true)
+        $("#S_buttonSubmit").attr("disabled", false);
+        window.bank = bankers;
+        window.logs = logs;
+      }     
 function withdraw() {
     var bank = window.bank;
     var log = window.logs;
