@@ -152,54 +152,6 @@ function withdraw() {
             </table>
          </div>
 
-<span class = "cust">Customer</span>
-               <!-- right content here-->
-               <ul style = "list-style: none;">
-                  <li id = "max">
-                     Maximum Limit :- Rs <span id = "maxLim">1000</span>
-                  </li>
-                  <hr />
-                  <li>
-                     &nbsp;
-                  </li>
-                  <li id = "Please">
-                     Please Enter amount in multiples of 50/100 only <br/>
-                     Despense will be done according to availability of notes.
-                   </br/>
-                  </li>
-                  <li>
-                     &nbsp;
-                  </li>
-                  <li>Enter Amount
-                     <input type = "number" placeholder = "Enter Amount" id = "amount" min = "0" onblur = "validateAmount()" onkeypress = "return isNumberKey(event)">
-                  </li>
-                  <li>
-                     &nbsp;
-                  </li>
-                  <div class = "subm">
-                     <input type = "submit" class = "submit" value = "SUBMIT" id = "withdrawButton" onclick = "withdraw(); Clear1();"></input>
-                  </div>
-               </ul>
-               <div class = "status">
-                  <label>STATUS</label>
-                  <input type = "text" id = "status" DISABLED></input>
-               </div>
-            </div>
-         </div>
-         <div class = "logs">
-            <table id = "logsTable">
-               <tr>
-                  <th>Amount Requested</th>
-                  <th>2000</th>
-                  <th>500</th>
-                  <th>100</th>
-                  <th>50</th>
-                  <th>amount left</th>
-                  <th>credit/debit</th>
-               </tr>
-            </table>
-         </div>
-
          <div class = "footer">
             <span class = "foo">
             TO THE NEW
